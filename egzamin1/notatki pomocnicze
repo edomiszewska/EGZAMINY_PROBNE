@@ -1,0 +1,42 @@
+BAZA DANYCH: malarz
+
+
+SELECT cena, pojemnosc from farby where kolor like "czerwony";
+
+SELECT cena/pojemnosc as cena_jednostkowa, kolor from farby;
+
+SELECT farby.kolor, malowanie.liczba_puszek from farby join malowanie on malowanie.id_farby=farby.id_farby where malowanie.id_pomieszczenia="3";
+
+create view pomieszcenie1 as select id_sciany, id_farby, liczba_puszek from malowanie where id_pomieszczenia="1";
+
+
+
+
+WAŻNE DO CSS:
+
+<sup></sup> - daje cos do indeksu gornego
+
+<sub></sub> - daje cos do indeksu dolnego
+
+border-collapse: collapse; - obramowanie połączone w jedną linię
+
+
+WAŻNE DO HTML:
+table - tabela
+tr - row czyli rząd 
+th,td
+
+rowspan, colspan
+
+lista punktowana i numerowana
+ul
+li   PUNKTOWANA
+
+lub
+
+ol
+li  NUMEROWANA
+=============================
+PRZY PHP NAME 
+PRZY JS ID
+===========================
