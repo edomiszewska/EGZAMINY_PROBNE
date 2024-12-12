@@ -1,0 +1,10 @@
+update wagi set dzien=CURRENT_DATE, czas=CURRENT_TIME 
+where wagi.lokalizacje_id like "2" or  wagi.lokalizacje_id like "3" or  wagi.lokalizacje_id like "4";
+
+SELECT lokalizacje.ulica from lokalizacje;
+
+insert into wagi(lokalizacje_id, waga, rejestracja, dzien, czas) VALUES(5,FLOOR(1 + RAND() * (10 - 1 +1)), 'DW12345', CURRENT_DATE, CURRENT_TIME); 
+
+select rejestracja, waga, dzien, czas, ulica from wagi
+join lokalizacje on lokalizacje.id=wagi.lokalizacje_id
+where waga>5;
