@@ -1,0 +1,68 @@
+* {
+font-family: tahoma;
+
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    background-color: #519657;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+
+#pierw{
+width: 70%;
+}
+#drug{
+    width: 30%;
+}
+
+section, main, aside{
+
+    background-color: #E1E1E1;
+    height: 450px;
+}
+
+aside, section{
+
+    width: 25%;
+   
+}
+
+main{
+
+    width: 50%;
+    overflow: auto;
+}
+
+footer{
+    background-color: #80C683;
+    text-align: center;
+    width: 100%;
+}
+
+#tir{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+table{
+    border: solid 1px #80C683;
+}
+td,th{
+padding: 2px;
+}
+td:hover{
+    background-color: #80C683;
+}
+tr:last-child{
+    background-color: red;
+
+}
