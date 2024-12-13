@@ -1,0 +1,13 @@
+select count(*), pensja from pracownicy group by pensja order by pensja desc;
+
+
+select imie, nazwisko, nazwa from pracownicy
+join stanowiska on stanowiska.id=pracownicy.stanowiska_id
+where staz>10;
+
+
+select nazwisko, pensja from pracownicy
+join stanowiska on stanowiska.id=pracownicy.stanowiska_id
+where staz BETWEEN 10 and 20;
+
+alter table stanowiska add column minPensja int;
