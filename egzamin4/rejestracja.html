@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+
+    <aside>
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+
+        <table>
+            <tr>
+                <th>co?
+                </th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr><td>ubrania</td>
+            <td>15%</td></tr>
+            <tr><td>buty</td>
+            <td>25%</td></tr>
+        </table>
+    </aside>
+
+
+
+
+
+    <header>
+<h1>Zarejestruj się w sklepie</h1>
+    </header>
+
+
+    <main>
+<button id="klient">Klient</button>
+<button id="adres">Adres</button>
+<button id="kontakt">Kontakt</button>
+
+<section id="blok1">
+<p>Imię</p> <input type="text" placeholder="Wpisz dane.." id="imie">
+<p>Nazwisko</p> <input type="text" name="wpis" id="nazwisko">
+<p>Data urodzenia</p> <input type="date" name="wpis" id="data">
+</section>
+
+
+<section id="blok2">
+<p>Ulica</p> <input type="text" name="wpis2" id="ulica">
+<p>Numer</p> <input type="number" name="wpis2" id="numer">
+<p>Miasto</p> <input type="text" id="miasto">
+</section>
+<section id="blok3">
+<p>Numer komrówkowy</p> <input type="tel" name="wpis3" id="telefon"><br>
+<input type="checkbox" name="wpis3" id="rodo">Akceptuję RODO<br>
+<button type="submit" id="przycisk3">Zatwierdź dane</button>
+</section>
+
+
+    </main>
+
+    <section id="pasek">
+        <section id="blok">
+
+        </section>
+    </section>
+
+    <footer>
+        <p>Rejestrację do sklepu wykonał nr 7</p>
+    </footer>
+
+
+
+<script>
+const klient= document.querySelector('#klient');
+const adres= document.querySelector('#adres');
+const kontakt= document.querySelector('#kontakt');
+const blok1=document.querySelector('#blok1');
+const blok2=document.querySelector('#blok2');
+const blok3=document.querySelector('#blok3');
+
+const pasek=document.querySelector('#pasek');
+const blok=document.querySelector('#blok');
+const inputy=document.querySelectorAll('input');
+
+const przycisk3=document.querySelector('#przycisk3');
+
+klient.addEventListener('click', evt=>{
+    blok1.style.display='block';
+    blok2.style.display='none';
+    blok3.style.display='none';
+});
+
+adres.addEventListener('click', evt=>{
+    blok1.style.display='none';
+    blok2.style.display='block';
+    blok3.style.display='none';
+});
+
+kontakt.addEventListener('click', evt=>{
+    blok1.style.display='none';
+    blok2.style.display='none';
+    blok3.style.display='block';
+})
+let szerokosc = 4; 
+
+inputy.forEach(input => {
+    input.addEventListener('focusout', evt =>{
+        
+        szerokosc = Math.min(szerokosc + 12, 100); 
+        blok.style.width = szerokosc + '%'
+        
+    })
+});
+
+
+przycisk3.addEventListener('click', evt=>{
+    let wynik='';
+    inputy.forEach(wartosc => {
+        wynik= wynik + wartosc.value + ','
+        
+    }); console.log(wynik)
+})
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
