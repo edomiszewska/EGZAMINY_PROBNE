@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+<h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <section id="lewy">
+<button id="lewybut">&lt;</button>
+    </section>
+
+    <main>
+        <img src="1.jpg" alt="Aktywne zdjęcie" id="main">
+    </main>
+
+    <aside id="prawy">
+        <button id="prawybut">&gt;</button>
+
+    </aside>
+
+    <article id="mini">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </article>
+
+    <footer>
+        <h3>Autorem galerii jest </h3>
+        <p>nr 7</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+
+
+<script>
+
+const lewybut=document.querySelector('#lewybut')
+const prawybut=document.querySelector('#prawybut')
+
+const main=document.querySelector('#main')
+
+let nrzdj=1;
+
+
+
+prawybut.addEventListener('click', evt=>{
+    nrzdj=nrzdj+1
+    if(nrzdj>7){
+        nrzdj=1;
+    }
+         main.src=`${nrzdj}.jpg`
+    
+   
+
+
+})
+
+lewybut.addEventListener('click', evt=>{
+    nrzdj=nrzdj-1
+    if(nrzdj<1){
+        nrzdj=7;
+    }
+         main.src=`${nrzdj}.jpg`
+    
+   
+
+
+})
+
+
+
+</script>
+
+</body>
+</html>

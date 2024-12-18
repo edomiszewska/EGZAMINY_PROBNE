@@ -1,0 +1,77 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header,footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+header{
+    width: 100%;
+}
+
+footer{width: 100% ;}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside, section, main{
+    background-color: lightsalmon;
+    height: 527px;
+}
+
+#lewy, #prawy{
+    width: 15%;
+}
+
+main{
+    width: 70%;
+}
+ #mini{
+    background-color: maroon;
+    height: 70px;
+ }
+
+ button{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+ }
+
+ #mini img{
+    height: 70px;
+    animation-duration: 4s;
+    animation: animacja 4s linear;
+ }
+
+ @keyframes animacja{
+    0%{padding-left: 50px;}
+100%{padding-left: 0px;}
+}
+
+main>img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+main>img:hover{
+animation: animacja2 5s linear;
+
+
+}
+
+article{
+    width: 100%;
+}
+
+@keyframes animacja2{
+    0%{ scale: 100%;}
+    100%{scale: 120%;}
+}
