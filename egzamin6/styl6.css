@@ -1,0 +1,54 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    background-color: #6F79A8;
+    color: white;
+    height: 140px;
+}
+#pierwszy{
+    width: 30%;
+}
+footer{
+    width: 100%;
+}
+#drugi{
+    width: 70%;
+}
+
+section{
+    display: inline-block;
+    background-color: #9FA8DA;
+    width: 160px;
+    height: 85px;
+    margin: 5px;
+    border: solid 1px #6F79A8;
+    overflow: hidden;
+
+}
+
+main{
+    width: 100%;
+}
+
+section:hover{
+    background-color: #6F79A8;
+    color: white;
+
+}
+
+footer{
+    background-color: #6F79A8;
+    color: white;
+    padding: 5px;
+    text-align: right;
+}
+
+h6{
+    text-align: center;
+}
