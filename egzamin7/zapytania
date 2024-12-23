@@ -1,0 +1,7 @@
+select tytul, plik from zdjecia where polubienia>=100;
+
+select plik, tytul, polubienia, imie, nazwisko from zdjecia join autorzy on autorzy.id=zdjecia.autorzy_id order by nazwisko;
+
+select imie, count(zdjecia.id) from autorzy join zdjecia on zdjecia.autorzy_id=autorzy.id group by imie;
+
+alter table zdjecia add column rozmiarPliku int;
