@@ -1,0 +1,13 @@
+select nazwa, ulica from kwiaciarnie where miasto like "Malbork";
+
+select id_kwiaciarni,  count(id_zam) from zamowienia group by id_kwiaciarni;
+
+select nazwa, miasto, kwiaty from kwiaciarnie join zamowienia on zamowienia.id_kwiaciarni=kwiaciarnie.id_kwiaciarni where data="2017-01-07";
+
+create table klienci (
+   id int PRIMARY key AUTO_INCREMENT not null,
+    imie varchar(15),
+    nazwisko varchar(15),
+    rabat int unsigned
+    
+    );
