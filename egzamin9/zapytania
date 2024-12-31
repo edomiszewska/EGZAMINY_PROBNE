@@ -1,0 +1,7 @@
+select imie, miot from swinki where data_ur like "%-07-%";
+
+select DISTINCT data_ur, miot, rasa from swinki join rasy on rasy.id=swinki.rasy_id where rasy_id="1";
+
+select imie, cena, opis from swinki where rasy_id="1";
+
+select rasa from rasy;
