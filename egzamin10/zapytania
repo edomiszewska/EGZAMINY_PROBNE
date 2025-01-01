@@ -1,0 +1,8 @@
+select nazwa from marki;
+
+select model, rocznik, przebieg, paliwo, cena, zdjecie from samochody where id like "10";
+
+select nazwa, model, rocznik, cena, zdjecie from marki
+join samochody on samochody.marki_id=marki.id where wyrozniony="1" limit 4;
+
+select model, cena, zdjecie from samochody JOIN marki on marki.id=samochody.marki_id where marki.nazwa like "Audi";
