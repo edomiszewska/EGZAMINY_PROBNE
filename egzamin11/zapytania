@@ -1,0 +1,13 @@
+select id, dataWyjazdu, cel, cena from wycieczki where dostepna like "1";
+
+
+
+select nazwaPliku, podpis from zdjecia order by podpis desc;
+
+
+select cel, cena, podpis from wycieczki
+join zdjecia on zdjecia.id=wycieczki.zdjecia_id
+where cena>1200;
+
+
+alter table wycieczki add column liczbaDni int unsigned not null after dataWyjazdu;
