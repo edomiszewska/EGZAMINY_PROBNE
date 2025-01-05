@@ -1,0 +1,8 @@
+select imie, nazwisko, koszt from uczestnicy where zaplacono="0";
+
+select avg(koszt) as "sredni koszt" , sum(koszt) as "calkowity koszt ", count(uczestnicy.id) as "liczba uczestnikow " from uczestnicy;
+
+select nazwa, nazwisko, email from uczestnicy
+join wyklady on wyklady.id=uczestnicy.wyklady_id where zaplacono="1";
+
+alter table uczestnicy drop column haslo;
