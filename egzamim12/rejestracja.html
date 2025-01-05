@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+<h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+    </header>
+
+    <main>
+<form action="#">
+<section>
+    <h2>Dane osobowe</h2>
+    <input type="text" placeholder="Wpisz imię.." required id="imie">
+    <input type="text" placeholder="Wpisz nazwisko.." required id="nazwisko">
+    <button id="przy">Następna karta</button>
+
+</section>
+
+<article>
+    <h2>Dane kontaktowe</h2>
+    <input type="email" name="mail" id="mail" placeholder="Twój e-mail..">
+    <input type="tel" name="tel" id="tel" placeholder="Twój numer telefonu..">
+    <button id="przy2">Następna karta</button>
+
+</article>
+
+<aside>
+    <h2>Hasło do logowania</h2>
+    <input type="password" name="pass" id="pass" placeholder="Podaj hasło">
+    <input type="password" name="pass2" id="pass2" placeholder="Powtórz hasło">
+    <button id="zat">Zatwierdź</button>
+
+</aside>
+
+</form>
+    </main>
+
+    <footer id="jeden">
+        
+    <video controls>
+      <source src="motyl.mp4" type="video/mp4">
+      Przeglądarka nie obsługuje tego formatu.
+    </video>
+    </footer>
+
+    <footer id="dwa">
+        <h3>Plan konferencji</h3>
+        <table><tr><td>9:00-12:00</td>
+        <td>Pielęgnacja roślin</td>
+    </tr>
+<tr><td>13:00-15:00</td>
+<td>Targi kwiatowe</td></tr></table>
+    </footer>
+
+    <footer id="trzy">
+        <p><a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+    </footer>
+
+    <footer id="cztery">
+       <p>Formularz wykonał: nr 7</p>
+        
+    </footer>
+
+
+    <script>
+        const przy=document.querySelector('#przy');
+        const przy2=document.querySelector('#przy2');
+        const zat=document.querySelector('#zat');
+
+        const section=document.querySelector('section');
+        const article=document.querySelector('article');
+        const aside=document.querySelector('aside');
+
+        const pass=document.querySelector('#pass')
+        const pass2=document.querySelector('#pass2')
+        const imie=document.querySelector('#imie')
+        const nazwisko=document.querySelector('#nazwisko')
+        
+        przy.addEventListener('click', evt =>{
+            evt.preventDefault()
+            section.style.visibility='hidden'
+            article.style.visibility='visible'
+        })
+        przy2.addEventListener('click', evt =>{
+           evt.preventDefault()
+            article.style.visibility='hidden'
+            aside.style.visibility='visible'
+        })
+
+        zat.addEventListener('click', evt=>{
+            evt.preventDefault()
+            if(pass.value!=pass2.value){
+                alert('podane hasła różnią się')
+            }
+            let imie2=imie.value
+            let nazwisko2=nazwisko.value
+            console.log(`Witaj ${imie2} ${nazwisko2} `)
+        })
+
+    </script>
+
+</body>
+</html>
