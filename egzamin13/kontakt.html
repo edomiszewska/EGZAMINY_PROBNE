@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputery</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="animacja.gif" alt="Pogotowie komputerowe">
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <main id="jeden">
+           
+        </main>
+
+        <main id="dwa">
+           <h2>Kontakt</h2>
+           <table>
+            <tr><td>Imię: </td>
+            <td><input type="text" id="imie"></td></tr>
+
+                <tr><td>Nazwisko:</td><td>
+                    <input type="text" name="nazwisko" id="nazwisko">
+                </td></tr>
+                <tr><td>Email:</td><td><input type="email" name="mail" id="mail"></td></tr>
+
+                <tr><td>Zgłoszenie: </td><td><select name="lista" id="lista">
+                    <option value="naprawa komputerów">naprawa komputerów</option>
+                    <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                    <option value="wirusy">wirusy</option>
+                    <option value="konfiguracja LAN">konfiguracja LAN</option>
+            
+                </select></td></tr>
+                <tr><td></td>
+                    <td><input type="checkbox" name="wys" id="wys" checked>Wyślij kopię wiadomości</td>
+                </tr>
+                <tr><td></td>
+                <td><button id="czysc">Czyść</button>
+            <button id="wyslij">Wyślij</button></td></tr>
+
+
+           </table>
+           <hr>
+           <p id="wyswietl">
+
+
+
+           </p>
+        </main>
+
+        <main id="trzy">
+          
+        </main>
+
+        <footer>
+<p><em>Autor: nr7</em></p>
+        </footer>
+
+
+    </div>
+
+<script>
+const wyslij=document.querySelector('#wyslij');
+const imie=document.querySelector('#imie');
+const nazwisko=document.querySelector('#nazwisko');
+const mail=document.querySelector('#mail');
+const select=document.querySelector('select');
+const wyswietl=document.querySelector('#wyswietl')
+wyslij.addEventListener('click', evt=>{
+    
+    evt.preventDefault()
+    wyswietl.innerHTML=`${imie.value} ${nazwisko.value}<br>
+    ${mail.value.toLowerCase()} <br>
+    Usługa: ${select.value}
+    `
+
+
+})
+
+
+
+
+
+</script>
+
+</body>
+</html>
