@@ -1,0 +1,11 @@
+insert into logowanie values(3,'Jeremi','Jer123');
+
+SELECT floor(avg(rokUr)) as 'sredni rok urodzenia' from uczestnicy;
+
+SELECT imie, nazwisko, nick from uczestnicy
+join logowanie on logowanie.id=uczestnicy.logowanie_id
+where imie like "J%";
+
+create user 'uczestnik'@'localhost' identified by 'Ucz123&';
+
+grant select, update on uczestnicy to 'uczestnik'@'localhost';
