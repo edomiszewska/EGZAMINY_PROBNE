@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Chat</h2>
+    </header>
+    <main>
+        <article>
+        <section class="jeden">
+            <img src="Jolka.jpg" alt="Jolanta">
+            <p>Cześć idziesz jutro do kina?</p>
+        </section>
+
+        <section class="dwa">
+            <img src="Krzysiek.jpg" alt="Krzysiek">
+            <p>Tak! A ty?</p>
+        </section>   </article>
+
+            Wpisz wiadomość: <input type="text" name="wiadomosc" id="wiadomosc">
+        
+ 
+            <button id="wyslij" name="wyslij">Wyślij</button></br>
+            <button id="losowe" name="losowe">Generuj losową wiadomość</button>
+   </main>
+    <aside>
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematyczne</li>
+            <ol>
+                <li>Turystyczny</li>
+                <li>Żeglarski</li>
+                <li>Filatelistyczny</li>
+                <li>Hodowla zwierzątek domowych</li>
+            </ol>
+            
+        </ul>
+
+        <h3>Uczestnicy</h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak">
+
+        <p>Krzysztof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+    </aside>
+
+    <footer>
+<p>Stronę wykonał nr 7</p>
+    </footer>
+
+    <script>
+        const wyslij=document.querySelector('#wyslij')
+        const losowe=document.querySelector('#losowe')
+        const wiadomosc=document.querySelector('#wiadomosc')
+        const article=document.querySelector('article')
+
+
+
+        wyslij.addEventListener('click', evt=>{
+            evt.preventDefault()
+            document.createElement(` <section class="jeden">
+            <img src="Jolka.jpg" alt="Jolanta">
+            <p>${wiadomosc.value}</p>
+        </section>`)
+        
+        })
+
+    </script>
+</body>
+</html>
