@@ -1,0 +1,8 @@
+select haslo from uzytkownicy where login like "Justyna";
+
+select count(*) from dane;
+
+select login, rok_urodz, przyjaciol, hobby, zdjecie from uzytkownicy
+join dane on dane.id=uzytkownicy.id where login like "Justyna";
+
+alter table dane add stanowisko varchar(50);
