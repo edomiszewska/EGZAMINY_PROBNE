@@ -10,24 +10,6 @@
     <header>
         <h2>Chat</h2>
     </header>
-    <main>
-        <article>
-        <section class="jeden">
-            <img src="Jolka.jpg" alt="Jolanta">
-            <p>Cześć idziesz jutro do kina?</p>
-        </section>
-
-        <section class="dwa">
-            <img src="Krzysiek.jpg" alt="Krzysiek">
-            <p>Tak! A ty?</p>
-        </section>   </article>
-
-            Wpisz wiadomość: <input type="text" name="wiadomosc" id="wiadomosc">
-        
- 
-            <button id="wyslij" name="wyslij">Wyślij</button></br>
-            <button id="losowe" name="losowe">Generuj losową wiadomość</button>
-   </main>
     <aside>
         <h3>Chaty</h3>
         <ul>
@@ -49,6 +31,25 @@
         <p>Krzysztof Łukasiński</p>
         <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
     </aside>
+    <main>
+        <article>
+        <section class="jeden">
+            <img src="Jolka.jpg" alt="Jolanta">
+            <p>Cześć idziesz jutro do kina?</p>
+        </section>
+
+        <section class="dwa">
+            <img src="Krzysiek.jpg" alt="Krzysiek">
+            <p>Tak! A ty?</p>
+        </section>   </article>
+
+            Wpisz wiadomość: <input type="text" name="wiadomosc" id="wiadomosc">
+        
+ 
+            <button id="wyslij" name="wyslij">Wyślij</button></br>
+            <button id="losowe" name="losowe">Generuj losową wiadomość</button>
+   </main>
+    
 
     <footer>
 <p>Stronę wykonał nr 7</p>
@@ -64,11 +65,38 @@
 
         wyslij.addEventListener('click', evt=>{
             evt.preventDefault()
-            document.createElement(` <section class="jeden">
+            let ele=document.createElement('section')
+            ele.innerHTML=`
             <img src="Jolka.jpg" alt="Jolanta">
-            <p>${wiadomosc.value}</p>
-        </section>`)
-        
+            <p>${wiadomosc.value}</p>`
+
+        article.appendChild(ele)
+        ele.classList.add("jeden")
+        ele.scrollIntoView()
+
+        })
+
+        let tablica=Array("Świetnie!",
+"Kto gra główną rolę?",
+"Lubisz filmy Tego reżysera?",
+"Będę 10 minut wcześniej",
+"Może kupimy sobie popcorn?",
+"Ja wolę Colę",
+"Zaproszę jeszcze Grześka",
+"Tydzień temu też byłem w kinie na Diunie",
+"Ja funduję bilety")
+
+        losowe.addEventListener('click', evt2=>{
+            evt2.preventDefault()
+           let liczba= Math.round(Math.random()*8)
+           let ele2=document.createElement('section')
+           ele2.innerHTML=`
+            <img src="Krzysiek.jpg" alt="Krzysiek">
+            <p>${tablica[liczba]}</p>`
+
+        article.appendChild(ele2)
+        ele2.classList.add("dwa")
+        ele2.scrollIntoView()
         })
 
     </script>

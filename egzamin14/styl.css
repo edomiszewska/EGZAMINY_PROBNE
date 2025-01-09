@@ -6,29 +6,31 @@ header{
     background-color: tomato;
     color: white;
     text-align: center;
-    width: 100%;
+    width: 80%;
     height: 80px;
-    grid-area: header;
+    float: left;
 }
 
 main{
-    width: 100%;
+    width: 80%;
     height: 600px;
-    grid-area: main;
+    float: left;
+    background-color: white;
 }
 
 aside{
     background-color: coral;
-    width: 100%;
+    width: 20%;
     height: 680px;
-    grid-area: aside;
+    float: right;
 }
+
 
 footer{
     background-color: tomato;
      color: white;
      text-align: center;
-     grid-area: footer;
+   
 }
 
 img{
@@ -40,7 +42,7 @@ article{
     border: solid 1px tomato;
     margin: 15px;
     height: 470px;
-    overflow: visible;
+    overflow:scroll;
 }
 
 section{
@@ -84,15 +86,11 @@ width: 500px;
 
 }
 
-body{
-    display: grid;
-    grid-template-columns: 80% 20% ;
-    grid-template-rows: 80px 600px  auto ;
-    grid-template-areas: "header aside"
-                          "main aside"
-                          "footer footer";
-}
+/* body{
 
+    display: flex;
+    flex-wrap: wrap;
+} */
 footer{
     width: 100%;
 }
