@@ -1,0 +1,48 @@
+*{
+    font-family: garamond;
+    text-align: center;
+}
+
+body{
+    background-color: lavender;
+    display: flex;
+    flex-wrap: wrap;
+}
+header, footer{
+    background-color: #AF8EB5;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
+section, main, aside{
+    background-color: #E1BEE7;
+    width: 30%;
+    height: 500px;
+    padding-top: 40px;
+    margin: 15px;
+    box-shadow: 10px 10px 10px dimgray;
+    
+}
+
+a{
+    color: indigo;
+    font-size: 150%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+a:hover{
+    background-color: indigo;
+    color: white;
+}
+
+img, table{
+    border: solid 1px  black ;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
